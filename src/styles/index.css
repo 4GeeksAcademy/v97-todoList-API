@@ -70,7 +70,7 @@ h1 {
   color: rgb(229, 143, 143);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  
+  font-size: 30px;
 }
 .paper {
   background: #fff;
@@ -81,7 +81,6 @@ h1 {
     /* The third layer */ 0 20px 0 -10px #eee,
     /* The third layer shadow */ 0 20px 1px -9px rgba(0, 0, 0, 0.15);
   /* Padding for demo purposes */
-  /* padding: 10px; */
 }
 
 #deleteIcon {

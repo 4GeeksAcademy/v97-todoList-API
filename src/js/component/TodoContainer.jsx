@@ -12,10 +12,19 @@ export default function TodoContainer() {
     setUserInput(event.target.value);
   };
 
+  // const changeHandler = (arr) => {
+
+  //   if (arr.length === 0) {
+  //    return <Todo todo = "No tasks, add a task"/>
+  //   } else {
+  //     return todoList.map((todo, index) => (
+  //       <Todo key={index} index={index} todo={todo} removeTodo={removeTodo} />
+  //     ))
+  //   }
+  // };
+
   const removeTodo = (key) => {
-   
     setTodoList(todoList.filter((list, index) => index !== key));
-   
 
     return console.log(todoList);
   };
@@ -30,13 +39,6 @@ export default function TodoContainer() {
     }
   };
 
-  function todoListArr(todo, index) {
-    return (
-      <Todo key={index} index={index} todo={todo} removeTodo={removeTodo} />
-    );
-  }
-
-  
   return (
     <>
       <form onSubmit={(e) => e.preventDefault()}>
@@ -49,10 +51,12 @@ export default function TodoContainer() {
         />
       </form>
 
-      {todoList.map(todoListArr)}
-
+      {/* {changeHandler(todoList)} */}
+      
+      {todoList.map((todo, index) => (
+        <Todo key={index} index={index} todo={todo} removeTodo={removeTodo} />
+      ))}
       <p id="itemsLeft">{todoList.length} items left</p>
-    
     </>
   );
 }
